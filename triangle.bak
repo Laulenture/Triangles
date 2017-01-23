@@ -1,0 +1,52 @@
+﻿program triangle;
+
+uses crt;
+
+{
+//BUT : Fait un triangle
+//ENTREE : N/A
+//SORTIE : un triangle
+
+CONST
+	taillex = 7
+	tailley = 8
+
+VAR
+	tableau : TABLEAU[1..7,1..8] DE char
+	i, j : ENTIER
+	
+DEBUT
+	POUR i DE 1 A taillex FAIRE
+	DEBUT
+		POUR j DE 1 A tailley FAIRE
+		DEBUT
+			SI j := 1 ALORS
+			tableau[i,j] <- 
+}
+
+VAR
+	tableau : array[1..8,1..8] OF CHAR;
+	i, j, taille : INTEGER;
+	
+BEGIN
+	clrscr;
+	writeln('Entrez taille');
+	readln(taille);
+	FOR i := 1 TO (taille - 1) DO
+	BEGIN
+		FOR j := 1 TO taille DO
+		BEGIN
+			IF ((j = 1) OR (j = i)) THEN
+				tableau[i,j] := 'X'
+			ELSE
+			BEGIN
+				IF j < i THEN tableau[i,j] := 'O';
+			END;
+			write(tableau[i,j]);
+		END;
+	writeln();
+	END;
+	FOR i := 1 TO taille DO
+	write('X');
+	readln();
+END.
